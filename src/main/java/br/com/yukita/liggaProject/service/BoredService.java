@@ -53,7 +53,7 @@ public class BoredService {
             return response.stream()
                     .filter(f -> filtros.get("type") == null || f.getType().equalsIgnoreCase(filtros.get("type")))
                     .filter(f -> filtros.get("key") == null || f.getKeyCode().equalsIgnoreCase(filtros.get("key")))
-                    .filter(f -> filtros.get("kidFriendly") == null || f.isKidFriendly() == Boolean.parseBoolean(filtros.get("isKidFriendly")))
+                    .filter(f -> filtros.get("isKidFriendly") == null || f.isKidFriendly() == Boolean.parseBoolean(filtros.get("isKidFriendly")))
                     .filter(p -> filtros.get("price") == null || p.getPrice() == Double.parseDouble(filtros.get("price")))
                     .toList();
         }
